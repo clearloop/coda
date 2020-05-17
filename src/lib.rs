@@ -1,4 +1,2 @@
-#![allow(unused_macros)]
+#[macro_use]
 pub mod num;
-
-// pub use num::i4;
