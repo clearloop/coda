@@ -3,6 +3,13 @@ name = "coda"
 version = "0.1.0"
 authors = ["clearloop <udtrokia@gmail.com>"]
 edition = "2018"
+description = "The Limitation Game"
+repository = "https://github.com/clearloop/coda"
+license = "MIT"
+documentation = "https://docs.rs/coda"
+homepage = "https://github.com/clearloop/coda"
+keywords = ["no-std", "codec", "num"]
+readme = './README.md'
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
