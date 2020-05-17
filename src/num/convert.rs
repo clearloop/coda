@@ -3,7 +3,7 @@ macro_rules! impl_from {
     ($name:ident, $from:ty) => {
         impl From<$from> for $name {
             fn from(source: $from) -> $name {
-                $name(source & ($name::MAX.0).overflowing_sub(1).0)
+                $name(source).mask()
             }
         }
     };

@@ -1,11 +1,15 @@
 //! Numeric traits and functions for the built-in numeric types.
-mod cacl;
+mod calc;
 mod convert;
-mod shared;
+mod init;
 
-// nums
-mod int;
-mod uint;
+// deps
+use core::ops::{Deref, DerefMut};
 
-// exports
-pub use {int::i2, uint::u2};
+impl_int! {
+    [i2, 2, i8],
+}
+
+impl_uint! {
+    [u2, 2, i8],
+}
