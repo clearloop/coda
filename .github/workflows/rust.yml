@@ -1,4 +1,4 @@
-name: leetcode-cli
+name: coda
 
 on: [push, pull_request]
 
