@@ -9,3 +9,8 @@ edition = "2018"
 [features]
 hex = []
 default = ["hex"]
+
+[dev-dependencies.cargo-husky]
+version = "1"
+default-features = false
+features = ["precommit-hook", "user-hooks"]
