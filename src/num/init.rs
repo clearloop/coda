@@ -6,6 +6,16 @@ macro_rules! doc_comment {
     };
 }
 
+macro_rules! impl_all {
+    ($name:ident, $bits:expr, $type:ty) => {
+        impl_convert!($name, $type);
+        impl_methods!($name, $type);
+        impl_cmp!($name, $type);
+        impl_fmt!($name, $type);
+        impl_ops!($name, $type);
+    };
+}
+
 macro_rules! impl_int {
     {$([$name:ident, $bits:expr, $type:ty],)*} => {$(impl_int!($name, $bits, $type);)*};
     ($name:ident, $bits:expr, $type:ty) => {
@@ -29,8 +39,7 @@ macro_rules! impl_int {
             }
         }
 
-        impl_convert!($name, $type);
-        impl_calc!($name, $bits, $type);
+        impl_all!($name, $bits, $type);
     };
 }
 
@@ -53,7 +62,6 @@ macro_rules! impl_uint {
             }
         }
 
-        impl_convert!($name, $type);
-        impl_calc!($name, $bits, $type);
+        impl_all!($name, $bits, $type);
     };
 }
